@@ -1,0 +1,495 @@
+/* 2. DESAIN DAN STYLING: Reset dan Global Styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+}
+
+h1, h2, h3 {
+    color: #004d40; /* Hijau gelap, nuansa alam */
+}
+
+/* A. HEADER DAN BANNER Styling */
+.main-header {
+    background-color: #00897b; /* Hijau kebiruan */
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.header-content h1 {
+    margin-bottom: 5px;
+    color: white;
+}
+
+.header-content p {
+    margin-top: 0;
+    font-style: italic;
+}
+
+/* B. MENU APLIKASI (Navigasi) Styling */
+.main-nav {
+    background-color: #00695c; /* Sedikit lebih gelap dari header */
+}
+
+.main-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; /* Untuk responsivitas menu pada layar kecil */
+}
+
+.main-nav li a {
+    display: block;
+    padding: 15px 20px;
+    text-decoration: none;
+    color: white;
+    transition: background-color 0.3s;
+}
+
+.main-nav li a:hover {
+    background-color: #004d40;
+}
+
+/* Banner/Galeri Foto Styling */
+.banner-gallery {
+    position: relative;
+    height: 400px; /* Tinggi banner */
+    overflow: hidden;
+    background-color: #333;
+}
+
+.banner-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Memastikan gambar menutupi area tanpa terdistorsi */
+    opacity: 0.8;
+}
+
+.banner-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.banner-overlay h2 {
+    font-size: 2.5em;
+    color: white;
+    margin: 0;
+}
+
+
+/* C. DAFTAR PAKET WISATA Styling */
+.paket-wisata {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.paket-list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.paket-card {
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 300px; /* Lebar kartu paket */
+    text-align: left;
+    transition: transform 0.3s;
+}
+
+.paket-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.paket-img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.paket-info {
+    padding: 15px;
+}
+
+.paket-info h3 {
+    margin-top: 0;
+}
+
+.paket-promo {
+    font-weight: bold;
+    color: #d84315; /* Warna kontras untuk harga promo */
+    margin: 10px 0;
+}
+
+.harga {
+    font-size: 1.2em;
+}
+
+.btn-detail {
+    display: inline-block;
+    background-color: #00897b;
+    color: white;
+    padding: 10px 15px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.btn-detail:hover {
+    background-color: #00695c;
+}
+
+/* D. LINK VIDEO PROMOSI Styling */
+.video-promosi {
+    padding: 40px 20px;
+    text-align: center;
+    background-color: #e0f2f1; /* Latar belakang sedikit berbeda */
+}
+
+.video-container {
+    max-width: 800px;
+    margin: 20px auto 0;
+    position: relative;
+    /* Rasio aspek 16:9 untuk iframe */
+    padding-bottom: 56.25%; 
+    height: 0;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* Footer Styling */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 0.9em;
+}
+
+/* RESPONSIBILITY (Pengujian tampilan di berbagai ukuran layar) */
+@media (max-width: 768px) {
+    /* Menu Navigasi */
+    .main-nav ul {
+        flex-direction: column;
+    }
+
+    .main-nav li a {
+        padding: 10px;
+    }
+
+    /* Paket Wisata */
+    .paket-card {
+        width: 100%; /* Kartu memenuhi lebar pada layar kecil */
+        max-width: 400px; /* Batasi lebar agar tidak terlalu besar di tablet */
+    }
+    
+    .paket-list {
+        gap: 20px;
+    }
+    
+    /* Banner */
+    .banner-gallery {
+        height: 250px;
+    }
+    
+    .banner-overlay h2 {
+        font-size: 1.5em;
+    }
+}
+
+/* Styling untuk Seksi Konten Umum (About, Objek Wisata) */
+.content-section {
+    padding: 40px 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.content-section h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    border-bottom: 2px solid #00897b;
+    padding-bottom: 10px;
+}
+
+/* Styling untuk Seksi About */
+.about-bromo {
+    background-color: white;
+}
+
+.about-bromo p {
+    text-align: justify;
+    margin-bottom: 15px;
+}
+
+.fact-box {
+    background-color: #e0f2f1;
+    border-left: 5px solid #00897b;
+    padding: 15px;
+    margin: 20px 0;
+    border-radius: 5px;
+}
+
+.fact-box p {
+    margin: 5px 0;
+    text-align: left;
+    font-weight: 500;
+}
+
+/* Styling untuk Seksi Objek Wisata */
+.objek-wisata {
+    background-color: #f9f9f9;
+}
+
+.objek-list {
+    display: grid;
+    /* Membuat layout 2 kolom pada desktop */
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); 
+    gap: 25px;
+}
+
+.objek-item {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.objek-item h3 {
+    color: #00695c;
+    margin-top: 0;
+    font-size: 1.25em;
+}
+
+.objek-item p {
+    font-size: 0.95em;
+}
+
+/* Responsivitas untuk Objek Wisata */
+@media (max-width: 768px) {
+    .objek-list {
+        /* Kembali ke 1 kolom pada layar kecil */
+        grid-template-columns: 1fr; 
+    }
+}
+
+/* Styling untuk Seksi Fasilitas Wisata */
+.fasilitas-wisata {
+    background-color: #ffffff;
+}
+
+.section-description {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 1.1em;
+    color: #555;
+}
+
+.fasilitas-grid {
+    display: grid;
+    /* Membuat layout 3 kolom pada desktop */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
+    gap: 30px;
+    text-align: center;
+}
+
+.fasilitas-item {
+    background-color: #e0f7fa; /* Warna latar belakang ringan */
+    padding: 25px;
+    border-radius: 10px;
+    border: 1px solid #b2ebf2;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    transition: background-color 0.3s;
+}
+
+.fasilitas-item:hover {
+    background-color: #b2ebf2;
+}
+
+.fasilitas-item .icon {
+    font-size: 3em;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.fasilitas-item h3 {
+    color: #004d40;
+    margin: 5px 0 10px 0;
+}
+
+.fasilitas-item p {
+    font-size: 0.9em;
+    color: #444;
+}
+
+/* Responsivitas untuk Fasilitas */
+@media (max-width: 768px) {
+    .fasilitas-grid {
+        /* Kembali ke 2 kolom pada tablet/mobile */
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); 
+    }
+}
+
+/* Styling untuk Seksi Pemesanan */
+.pemesanan-section {
+    background-color: #f0fff4; /* Warna hijau muda untuk kesan segar */
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.pemesanan-section h2 {
+    color: #004d40;
+}
+
+.form-container {
+    max-width: 600px;
+    margin: 30px auto;
+    padding: 30px;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    border-top: 5px solid #00897b;
+}
+
+.pemesanan-form {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #333;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="tel"],
+.form-group input[type="date"],
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    box-sizing: border-box; /* Penting agar padding tidak menambah lebar */
+    font-size: 1em;
+    transition: border-color 0.3s;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: #00897b;
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 137, 123, 0.3);
+}
+
+.btn-submit {
+    background-color: #00897b;
+    color: white;
+    padding: 15px 20px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1.1em;
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.1s;
+}
+
+.btn-submit:hover {
+    background-color: #00695c;
+    transform: translateY(-2px);
+}
+
+/* Styling untuk Seksi Galery */
+.galery-section {
+    background-color: #f7f7f7;
+    padding: 50px 20px;
+}
+
+.photo-grid {
+    display: grid;
+    /* Membuat layout 3 kolom, responsif terhadap lebar layar */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+    gap: 15px;
+    margin: 30px auto;
+    max-width: 1200px;
+}
+
+.gallery-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.4s ease;
+}
+
+/* Efek hover zoom pada gambar */
+.gallery-item:hover img {
+    transform: scale(1.05);
+}
+
+figcaption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+    padding: 10px;
+    text-align: center;
+    font-size: 0.9em;
+    opacity: 0; /* Mulai dengan transparan */
+    transition: opacity 0.4s ease;
+}
+
+/* Tampilkan caption saat hover */
+.gallery-item:hover figcaption {
+    opacity: 1;
+}
+
+/* Responsivitas: Misalnya, pada layar yang sangat kecil, buat 1 kolom */
+@media (max-width: 500px) {
+    .photo-grid {
+        grid-template-columns: 1fr; 
+    }
+}
